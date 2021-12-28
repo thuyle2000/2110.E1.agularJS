@@ -12,5 +12,9 @@ AngularJS:
             voi cac bien cua ung dung AJS
 + ng-repeat: lap lai cac HTML element cho cac
              muc du lieu ben trong 1 tap hop
++ ng-show/ng-hide : hien hoac an cac thanh phan tren 
+            trang web
++ ng-include: nhung cac trang web khac vo trang web 
+              dang hien thi  
 
  
