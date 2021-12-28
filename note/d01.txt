@@ -4,3 +4,13 @@ AngularJS:
 - kien truc MVC (Model View Controller)
 - cac thanh phan quan trong: directive, expression,
   filter
+
+- cac directive pho bien:
++ ng-app: khoi tao ung dung AJS
++ ng-int: khoi tao gia tri cua 1 bien cua ung dung
++ ng-model: lien ket noi dung cua cac HTML element
+            voi cac bien cua ung dung AJS
++ ng-repeat: lap lai cac HTML element cho cac
+             muc du lieu ben trong 1 tap hop
+
+ 

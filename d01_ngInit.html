@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajs-ngInit</title>
+    <!-- buoc 1. nhung thu vien angularjs  vo trang web -->
+    <script src="js/angular.min.js"></script>
+</head>
+
+<!-- buoc 2. khai bao ung dung angularjs bang directive [ng-app] bat dau tu the body -->
+
+<body ng-app
+    ng-init="pName='cacao'; pPrice=120000; pQty=3">
+    <h2>AJS - ngInit Demo</h2>
+    <hr>
+    <h4>Order</h4>
+    <input type="text" name="product" id="product" ng-model="pName" placeholder="Input product" value="cacao"> <br><br>
+    <input type="number" name="price" id="price" ng-model="pPrice" placeholder="Input price"> <br> <br>
+    <input type="number" name="qty" id="qty" ng-model="pQty" placeholder="Input quantity"> <br> <br>
+    <hr>
+    <p>Amount : <span ng-bind=pPrice*pQty></span> </p>
+    <p>Amount : VND {{pPrice*pQty}} </p>
+</body>
+
+</html>
