@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajs CDN</title>
+
+    <!-- buoc 1. nhung thu vien angularjs theo link CDN vo trang web -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+
+<!-- buoc 2. khai bao ung dung angularjs bang directive [ng-app] bat dau tu the body -->
+<body ng-app>
+    <h2>AngularJS Introduction</h2>
+    <hr>
+
+    <!-- buoc 3. nhung gi nhap vo o input 'username' se duoc luu vo bien [user] (do khai bao ng-model) cua ung dung angularJS -->
+    <input type="text" name="username" id="username" placeholder="nhap ten cua ban " ng-model="user"> 
+
+    <!-- buoc 4. hien thi gia tri cua bien [user] theo qui uoc bieu thuc -->
+    <p>Hello {{user}} </p>
+</body>
+</html>
