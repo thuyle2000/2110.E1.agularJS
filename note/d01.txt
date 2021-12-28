@@ -1,0 +1,6 @@
+AngularJS:
+- framework javascript dua tren Jquery Lite de phat 
+  trien Single Page Application (SPA) Web App.
+- kien truc MVC (Model View Controller)
+- cac thanh phan quan trong: directive, expression,
+  filter
