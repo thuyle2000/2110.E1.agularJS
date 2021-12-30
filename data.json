@@ -1,0 +1,12 @@
+[
+    {"id":"nv01", "name":"tien dat", "salary":1000},
+    {"id":"nv02", "name":"quang nam", "salary":1200},
+    {"id":"nv03", "name":"anh doan", "salary":5000},
+    {"id":"nv04", "name":"bich van", "salary":3000},
+    {"id":"nv05", "name":"hong han", "salary":3000},
+    {"id":"nv06", "name":"khac cuong", "salary":4000},
+    {"id":"nv07", "name":"the vinh", "salary":3500},
+    {"id":"nv08", "name":"tri trung", "salary":7000},
+    {"id":"nv09", "name":"thien hung", "salary":4000},
+    {"id":"nv10", "name":"gia hung", "salary":3000}
+]
