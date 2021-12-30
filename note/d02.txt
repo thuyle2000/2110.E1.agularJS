@@ -7,3 +7,8 @@ theo ý muốn, đại diện bằng ký hiệu |
 - bài tập assignment: tao custom-filter, tim kiem nhan vien
             theo cot ten (bt mở rộng của demo d02_filter_filter_json.html) 
 
+- ng-route: tao ung dung SPA
+- cac custom directive có thể đc sử dụng như 1 thẻ lệnh
+  hoặc 1 thuộc tính của thẻ lệnh HTML
+- Qui tắc phạm vi: shared, inherited, isolated
+- $rootScope: phạm vi đc tạo ra và dùng chung cho toàn ứng dụng 
