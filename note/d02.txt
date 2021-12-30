@@ -1,0 +1,9 @@
+- filter: là bộ lọc cho phép tạo các định dạng dữ liệu 
+theo ý muốn, đại diện bằng ký hiệu |
+- built-in filters: bộ lọc có sẳn currency, date,
+  uppercase, lowercase, filter ...
+ 
+
+- bài tập assignment: tao custom-filter, tim kiem nhan vien
+            theo cot ten (bt mở rộng của demo d02_filter_filter_json.html) 
+
