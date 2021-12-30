@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajs-filter-number</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- buoc 1. nhung thu vien angularjs theo link CDN vo trang web -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+<!-- b2. khai bao ung dung AJS: directive ng-app -->
+<body ng-app="myAPP">
+    <div class="container" ng-controller="myCONTROL">
+        <h2>AJS Filter Date Demo</h2>
+        <hr>
+
+        <div>
+            <label for="">Enter your birthday: </label>
+            <input type="date" name="dob" id="dob" ng-model="bd">
+        </div>
+        <br>
+
+        <div>           
+            Default Date : {{bd | date}} <br>
+            Full Date : {{bd | date:"fullDate"}} <br> 
+            Long Date : {{bd | date:"longDate"}} <br> 
+            Short Date : {{bd | date:"shortDate"}} <br> <br>
+
+            Year: {{bd | date:"yyyy"}} <br> 
+            Month: {{bd | date:"MM"}},  {{bd | date:"MMM"}}, {{bd | date:"MMMM"}}<br> 
+            Day: {{bd | date:"dd"}} <br>
+            Date: {{bd | date:"EEE"}}, {{bd | date:"EEEE"}}<br> <br>
+
+            Time: {{bd | date:"shortTime"}} <br> 
+            Time: {{bd | date:"HH:mm:ss.sss "}} <br> 
+            Medium Time: {{bd | date:"mediumTime"}} <br> 
+            
+        </div>
+    </div>
+
+    <script>
+        //1. tao doi tuong dai dien cho ung dung AJS
+        let app = angular.module("myAPP", []);
+
+        //2. lap trinh cho controller co ten 'myCONTROL'
+        app.controller('myCONTROL', function($scope){
+            //3.khoi tao gia tri ban dau cho bien bd = ngay gio hien tai cua may tinh dang chay chuong trinh
+            $scope.bd = new Date();
+        })
+    </script>
+</body>
+</html>
