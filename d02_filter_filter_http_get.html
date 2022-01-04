@@ -60,10 +60,9 @@
         app.controller('myCONTROL', function($scope, $http){
             //3.khoi tao gia tri ban dau cho mang ds, chua ds nhanvien doc tu file json 'data.json'
 
-            $http.get("data.json").then(function(response){
+            $http.get("data.json")
+            .then(function(response){
                 $scope.ds = response.data;
-
-                // console.log($scope.ds);
             })
 
 
