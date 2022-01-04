@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-required</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- buoc 1. nhung thu vien angularjs theo link CDN vo trang web -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<!-- khai bao ung dung angularJS [ng-app] -->
+<body ng-app>
+    <div class="container">
+        <h3>Form Required Validation</h3>
+        <hr>
+
+        <form name="formSignin" >
+            <div>
+                <label for="">Email : </label> <br>
+                <input type="email" name="email" id="email" ng-model="mEmail" required>
+            </div>
+    
+            <div>
+                <label for="">Password : </label> <br>
+                <input type="password" name="pass" id="pass" ng-model="mPass" required>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Submit" class="btn btn-danger">
+                <input type="reset" value="Reset" class="btn btn-info">
+            </div>
+        </form>
+
+        <hr>
+        <div>
+            <h3>Form Status </h3>
+            <p> Email Valid Status: <span style="color: red;"> {{formSignin.email.$valid}} </span></p>
+            <p> Password Valid Status: <span style="color: red;"> {{formSignin.pass.$valid}} </span></p>
+        </div>
+
+    </div>
+   
+</body>
+</html>
