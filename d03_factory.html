@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajs-factory</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- buoc 1. nhung thu vien angularjs theo link CDN vo trang web -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myAPP">
+
+    <div class="container">
+        <h3>Factory Dependency</h3>
+        <hr>
+        <div ng-controller="myCTRL">
+            <h4>Factorial</h4>
+            Enter number: 
+            <input type="number" name="num" id="num" ng-model="num"> 
+            <button class="btn btn-danger" ng-click="calc()">Calculate</button> 
+            <p>
+                Result: {{result | number: 0}}
+            </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+<script>
+    //khai bao bien dai dien cho ung dung AngularJS
+    let app = angular.module("myAPP", []);
+
+    //khai bao 1 doi tuong factory thuc hien phep tinh giai thua so nguyen n
+    app.factory("MathService", function(){
+        //dinh nghia factory
+        let f = {};
+
+        //gan ham tinh giai thua cho f
+        f.factorial = function(n){
+            let r = 1;
+            for(let i=2; i<=n; i++){
+                r *= i;
+            }
+            return r;
+        }
+
+        return f;
+    });
+
+
+    //lap trinh cho controller myCTRL, va nhung factory MathService
+    app.controller('myCTRL', function ($scope, MathService) {
+        $scope.calc = function(){
+            $scope.result = MathService.factorial($scope.num);
+        }
+        
+    })
+
+
+
+</script>
+
+</html>
