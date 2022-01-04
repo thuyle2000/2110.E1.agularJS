@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Date</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div class="container" ng-controller="myController">
+        <h2>AJS Filter Search By Name <small> (Author: Le Anh Xuan) </small></h2>
+        <hr>
+        <div>
+           <p>
+               Search:
+               <input type="text" name="sname" id="sname" ng-model="searchName">
+           </p>
+           <h4>Employee list</h4>
+           <table class="table table-bordered table-hover table-striped">
+               <thead>
+                   <tr>
+                       <th>No.</th>
+                       <th>ID</th>
+                       <th>Name</th>
+                       <th>Salary</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr ng-repeat="e in ds | filter:{name:searchName}">
+                        <td>{{e.No}}</td>
+                        <td>{{e.id}}</td>
+                        <td>{{e.name}}</td>
+                        <td>{{e.salary}}</td>
+                   </tr>
+               </tbody>
+           </table>
+        </div>
+    </div>
+</body>
+<script>
+    let app = angular.module("myApp", []);
+    app.controller('myController', function($scope){
+        $scope.ds = [
+            {"No":1, "id":"nv01", "name":"Tiến Đạt", "salary":8000},
+            {"No":2, "id":"nv02", "name":"Anh Xuân", "salary":5000},
+            {"No":3, "id":"nv03", "name":"Quang Nam", "salary":7000},
+            {"No":4, "id":"nv04", "name":"Thiên Hưng", "salary":6500},
+            {"No":5, "id":"nv05", "name":"Khắc Cường", "salary":7500},
+            {"No":6, "id":"nv06", "name":"Quang Công", "salary":6000},
+            {"No":7, "id":"nv07", "name":"Chí Cường", "salary":7000}
+        ]; 
+    });
+</script>
+</html>
