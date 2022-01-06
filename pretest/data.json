@@ -1,0 +1,8 @@
+{
+    "food":[
+        {"id":"F01", "name":"Pho","price":30000} , 
+        {"id":"F02", "name":"Bun bo hue","price":35000},
+        {"id":"F03", "name":"Mi quang","price":30000},
+        {"id":"F04", "name":"Banh mi","price":20000}
+    ]
+}

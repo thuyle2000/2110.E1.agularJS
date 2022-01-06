@@ -1,0 +1,29 @@
+<div ng-controller="addCTR">
+
+    <h2>Add New Food</h2>
+    <hr>
+
+    <form name="formADD" ng-submit="add()">
+        <div>
+            <label for="">ID</label> <br>
+            <input type="text" name="fid" ng-model="fid" required>
+        </div>
+
+        <div>
+            <label for="">Name</label> <br>
+            <input type="text" name="fname" ng-model="fname" required>
+        </div>
+
+        <div>
+            <label for="">Price</label> <br>
+            <input type="number" name="fprice" ng-model="fprice" required min="100">
+        </div>
+
+        <br>
+        <div>
+            <input type="submit" value="Add" class="btn btn-danger" ng-disabled="formADD.$invalid">
+
+        </div>
+    </form>
+
+</div>
