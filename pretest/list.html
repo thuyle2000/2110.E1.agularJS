@@ -8,6 +8,8 @@
             <th>id</th>
             <th>name</th>
             <th>price</th>
+            <th>action</th>
+
         </thead>
         <tbody>
             <tr ng-repeat="x in ds">
@@ -15,6 +17,7 @@
                 <td>{{x.id}}</td>
                 <td>{{x.name}}</td>
                 <td>{{x.price}}</td>
+                <td> <button ng-click="remove($index)">Delete</button> </td>
             </tr>
         </tbody>
     </table>

@@ -85,7 +85,17 @@
         })
 
 
-        app.controller("listCTR", function ($scope) { });
+        app.controller("listCTR", function ($scope) { 
+            $scope.remove=function(index){
+                let yes = confirm("Are u sure ?");
+
+                //xoa san pham neu cau tra loi la yes
+                if(yes){
+                    $scope.ds.splice(index,1);
+                }
+            }
+
+        });
 
         app.controller("addCTR", function ($scope) {
             $scope.add = function () {
